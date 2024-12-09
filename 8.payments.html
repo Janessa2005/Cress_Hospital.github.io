@@ -4,171 +4,185 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <meta name="title" content="Payments Page - Secure and Easy Transactions">
+    <meta name="description" content="Make secure and hassle-free payments through our Payments Page. Fast, reliable, and optimized for all devices.">
+    <meta name="keywords" content="payments, secure payments, online transactions, payment page, easy payments">
+    <meta name="author" content="Cresseda Janessa George">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="en">
+    <meta name="rating" content="General">
+
+    
+
+    
     <title>Payments Page</title>
+    
     <link rel="stylesheet" href="8.payments.css">
 </head>
-
-
-
-
 
 <body>
 
     <header>
+        <img src="logo 2.png" width="10%" height="auto" alt="logo">
+        <br><br>
+        <form class="search-form" action="#" method="get">
+            <input type="text" name="select" placeholder="search...">
+            <button type="submit">Search</button>
+        </form>
+        <br><br>
+        <nav class="nav">
+            <ul>
+                <li><a href="index.html"><b>Home Page</b></a></li>
+                <li><a href="2.aboutus.html"><b>About Us</b></a></li>
+                <li><a href="3.services.html"><b>Services</b></a></li>
+                <li><a href="4.doctors.html"><b>Doctors</b></a></li>
+                <li><a href="5.consulting.html"><b>Consulting Reservation</b></a></li>
+                <li><a href="6.pharmacy.html"><b>Pharmacy</b></a></li>
+                <li><a href="7.contactus.html"><b>Contact Us</b></a></li>
+                <li><a href="8.payments.html"><b>Payments Portal</b></a></li>
+            </ul>
+        </nav>
+        <center><h1>Payments Portal</h1></center>
+    </header>
 
-    
-    <img src="logo 2.png" width="10%" height="auto">
-            
-        
-    <br>
-    <br>
-
-    
-    <form class="search-form" action="#" method="get">
-        <input type="text" name="select" placeholder="search...">
-        <button type="submit">Search</button>
-    </form>
-
-            
-    <br>
-    <br>
-
-    <nav class="nav">
-       
-        <ul>
-                <li><a href="index.html">Home Page</a></li>
-                <li><a href="2.aboutus.html">About Us</a></li>
-                <li><a href="3.services.html">Services</a></li>
-                <li><a href="4.doctors.html">Doctors</a></li>
-                <li><a href="5.consulting.html">Consulting Reservation</a></li>
-                <li><a href="6.pharmacy.html">Pharmacy</a></li>
-                <li><a href="7.contactus.html">Contact Us</a></li>
-                <li><a href="8.payments.html">Payments Portal</a></li>
-        </ul>
-    </nav>
-           
-    
-    <center> <h1>Payments Portal</h1></center>
-
-
-</header>
-
-
-
-
-
-
-<main>
-
-
-
-
-
-
+    <main>
         <form id="payments-portal">
-            
-            
-        <fieldset>
-            <legend><b>Payment Details</b></legend>
+            <fieldset>
+                <legend><b></b></legend>
+
+                <section>
+                    <h2>Current Order</h2>
+                    <table id="order-table" border="1">
+                        <thead>
+                            <tr>
+                                <th>Medicine</th>
+                                <th>Quantity</th>
+                                <th>Price</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Items will be dynamically added here -->
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="3">Total Price</td>
+                                <td id="total-price">Rs.0</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </section>
+                <br><br>
+
                 <ol>
                     <li>
                         <label for="Hospital">Select Hospital</label>
                         <select id="Hospital" name="hospital-name" required>
-                            <option value="text">Select Your Branch Hospital</option>
-                            <option value="text">Colombo 7</option>
-                            <option value="text">Perdeniya</option>
-                            <option value="text">Galle</option>
-                            <option value="text">Negombo</option>
-                            <option value="text">Anuradhapura</option>
-                            <!-- Add hospital options here -->
+                            <option value="" disabled selected>Select Your Branch Hospital</option>
+                            <option value="City01">Colombo 7</option>
+                            <option value="City02">Peradeniya</option>
+                            <option value="City03">Galle</option>
+                            <option value="City04">Negombo</option>
+                            <option value="City05">Anuradhapura</option>
                         </select>
                     </li>
-
+                    
+                    
+                
                     <li>
                         <label for="Payment">Select Payment Type</label>
                         <select id="Payment" name="payment-type" required>
-                            <option value="">Select Payment Type</option>
-                            <!-- Add payment type options here -->
+                            <option value="" disabled selected>Select Payment Type</option>
+                            <option value="Debit Card">Debit Card</option>
+                            <option value="Credit Card">Credit Card</option>
+                            <option value="Cash">Cash</option>
                         </select>
                     </li>
-
+                    
+                
+                
                     <li>
-                        <label for="Invoice">Invoice No.</label>
-                        <input type="text" id="Invoice" name="Invoice">
+                        <label for="cash">If Cash Payment: Cash Amount</label>
+                        <input type="text" id="cash" name="cash-amount" required>
                     </li>
-
+                    
+                 
+                    <li>
+                        <label for="card">If Card Payment: Card Number</label>
+                        <input type="text" id="card" name="card-number" required>
+                    </li>
+                    
+                    
+                
                     <li>
                         <label for="patient">Patient's Name</label>
-                        <input type="text" id="patient" name="name">
+                        <input type="text" id="patient" name="name" required>
                     </li>
-
-                    <li>
-                        <label for="amount">Amount</label>
-                        <input type="number" id="amount" name="amount" required>
-                        <select id="currency" name="currency" required>
-                            <option value="USD">USD</option>
-                            <option value="LKR">LKR</option>
-                        </select>
-                    </li>
-
+                    
+                
+                
                     <li>
                         <label for="payer">Payer's Name</label>
-                        <input type="text" id="payer" name="payer-name">
+                        <input type="text" id="payer" name="payer-name" required>
                     </li>
-
+                    
+              
+                
                     <li>
                         <label for="no">NIC or Passport No</label>
-                        <input type="text" id="no" name="NIC">
+                        <input type="text" id="no" name="nic" required>
                     </li>
-
+                    
+                    
+                   
                     <li>
                         <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" name="phone">
+                        <input type="tel" id="phone" name="phone" required>
                     </li>
-
+                
+                
+                    <li>
+                        <label for="address">Residential Address</label>
+                        <input type="text" id="address" name="address" required>
+                    </li>
+                    
+                 
+                
                     <li>
                         <label for="email">E-mail</label>
-                        <input type="email" id="email" name="email">
+                        <input type="email" id="email" name="email" required>
                     </li>
+                    
+                  
+
+
                 </ol>
-                <button type="submit">Submit</button>
-            </fieldset>
-        </form>
+                <button type="submit">Pay Now</button>
+                
+        
     </main>
 
     <footer>
+        <section class="Contact Us">
+            <h2>Connect with Us</h2>
+            <p><strong>Hotline:</strong>+94 11 7743567</p>
+            <p><strong>Email:</strong><a href="mailto:info@cressjaneshospital.lk">info@cressjaneshospital.lk</a></p>
+            <p><strong>Address:</strong><br>
+                193/36,<br>
+                Blue Horizon,<br>
+                Katana West,<br>
+                Katana,<br>
+                Negombo,<br>
+                Sri Lanka<br>
+            </p>
+            <p><a href="" target="_blank">View On Google Maps</a></p>
+        </section>
 
-    <div class="contact-section" align="left">
-        <h2>Connect with Us</h2>
-        <br>
-        <p><strong>Hotline:</strong> +94 11 7743567</p>
-        <br>
-        <p><strong>Email:</strong> <a href="mailto:info@cressjaneshospital.lk">info@cressjaneshospital.lk</a></p>
-        <br>
-        <p><strong>Address:</strong></p>
-        <p>
-            193/36,<br>
-            Blue Horizon,<br>
-            Katana West,<br>
-            Katana.<br>
-            Negombo.<br>
-            Sri Lanka.
-        </p>
-
-        <br>
-        <br>
-
-        <p><a href="https://www.google.com/maps" target="_blank">View On Google Maps</a></p>
-
-        <br>
-        <br>
-        
-        <p><a href="#">Privacy Policy</a></p>
-        <p><a href="#">Terms of Service</a></p>
-    </div>
-    <center><p>&copy;2024 Cress Jane Hospital.All rights resereved</p></center>
-
-</footer>
+        <center><p>&copy; 2024 Cress Jane Hospital. All rights reserved.</p></center>
+    </footer>
+            
+    <script src="payments.js"></script>
 </body>
-
 </html>

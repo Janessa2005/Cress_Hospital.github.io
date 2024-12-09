@@ -2,34 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pharmacy Page</title>
+    <meta name="viewport" content="width=device-width">
+    <title>About Us</title>
     <link rel="stylesheet" href="6.pharmacy.css">
 </head>
+
 <body>
-
-    <!-- Header Section -->
-    <header class="header-main">
-        <div class="header-container">
-            <img src="logo 2.png" alt="Logo" width="10%" height="auto" align="left">
-
-            <br>
-            <br>
-            <br>
-            
-            <!-- Search Form -->
+    <header>
+        <img src="logo 2.png" width="10%" height="auto">
+        <center>
             <form class="search-form" action="#" method="get">
-                <input type="text" name="select" placeholder="Search...">
+                <input type="text" name="select" placeholder="search...">
                 <button type="submit">Search</button>
             </form>
-        </div>
+        </center>
+        <br><br>
 
-
-        <br>
-        <br>
-
-        <!-- Navigation -->
-        <nav class="nav">
+        <nav>
             <ul>
                 <li><a href="index.html">Home Page</a></li>
                 <li><a href="2.aboutus.html">About Us</a></li>
@@ -42,81 +31,72 @@
             </ul>
         </nav>
 
-        <br>
-        <br>
-
+        <br><br><br><br>
         <h1><center>Cress Jane Pharmacy</center></h1>
-
-        <br>
-        <br>
     </header>
 
-    <!-- Main Content -->
+    <br><br>
+
     <main>
-        <section class="form-section">
-            <form id="pharmacy-form">
-                <fieldset>
-                    <legend>Patient Information Form</legend>
+        <div class="condition">
+            <div class="name-of-condition">
+               <img src="V817195105_g.jpg" alt="Emergency Care">
+                <a href="order.html#Med01"><h3>Analgesics</h3></a></a>
+            </div>
+            <div class="name-of-condition">
+                <img src="1489773316-8572.webp" alt="Dr. Vidma Jayani" width="50%" height="auto">
+                <a href="order.html#Med02"><h3>Antibiotics</h3></a>
+            </div>
+            <div class="name-of-condition">
+                <img src="antidepressants.webp" alt="Dr. Vidma Jayani">
+                <a href="order.html#Med04"><h3>Antidepressants</h3></a>
+            </div>
+            <div class="name-of-condition">
+                <img src="Antihistamine.jpg" alt="Dr. Vidma Jayani">
+                <a href="order.html#Med03"><h3>Antihistamines</h3></a>
+            </div>
+            <div class="name-of-condition">
+                <img src="antihypertensives.jpg" alt="Dr. Vidma Jayani">
+                <a href="order.html#Med05"><h3>Antihypertensives</h3></a>
+            </div>
+            <div class="name-of-condition">
+                <img src="160693-antipyretic.webp" alt="Dr. Vidma Jayani" width="50%" height="auto">
+                <a href="order.html#Med06"><h3>Antipyretics</h3></a>
+            </div>
+        </div>
 
-                    <label for="name">Full Name</label>
-                    <input type="text" id="name" name="name" required>
 
-                    <label for="email">E-mail</label>
-                    <input type="email" id="email" name="email" required>
+        <br><br>
 
-                    <label for="phone">Phone Number</label>
-                    <input type="tel" id="phone" name="phone" required>
+        
+    
 
-                    <label for="condition">Select Your Condition</label>
-                    <select id="condition" name="condition" required>
-                        <option value="">Select Condition</option>
-                        <option value="Emergency Care">Emergency Care</option>
-                        <option value="Surgical Services">Surgical Services</option>
-                        <option value="Intensive Care Unit (ICU)">Intensive Care Unit (ICU)</option>
-                        <option value="Cardiology">Cardiology</option>
-                        <option value="Pediatrics">Pediatrics</option>
-                        <option value="Obstetrics and Gynecology">Obstetrics and Gynecology</option>
-                        <option value="Pharmacy Services">Pharmacy Services</option>
-                        <option value="Mental Health Services">Mental Health Services</option>
-                    </select>
+        
 
-                    <div id="medications-list" class="medications-list">
-                        <!-- Dynamic medication list will be populated here -->
-                    </div>
 
-                    <label for="prescription">Upload Your Prescription Here</label>
-                    <input type="file" id="prescription" name="prescription" accept=".pdf, .jpg, .jpeg, .png" required>
-                    <p>Accepted Formats: PDF, JPG, JPEG, PNG</p>
 
-                    <button type="submit">Submit</button>
-                </fieldset>
-            </form>
-        </section>
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </main>
 
-    <!-- Footer Section -->
-    <footer>
-        <section class="contact-us">
-            <h2>Connect with Us</h2>
-            <p><strong>Hotline:</strong> +94 11 7743567</p>
-            <p><strong>Email:</strong> <a href="mailto:info@cressjaneshospital.lk">info@cressjaneshospital.lk</a></p>
-            <p><strong>Address:</strong><br>
-                193/36,<br>
-                Blue Horizon,<br>
-                Katana West,<br>
-                Katana.<br>
-                Negombo.<br>
-                Sri Lanka
-            </p>
-            <p><a href="https://www.google.com/maps" target="_blank">View On Google Maps</a></p>
-        </section>
-
-        <section class="footer-links">
-            <p><a href="#">Privacy Policy</a><br><a href="#">Terms of Service</a></p>
-        </section>
-
-        <p>&copy; 2024 Cress Jane Hospital. All rights reserved.</p>
-    </footer>
 
 </body>
 </html>

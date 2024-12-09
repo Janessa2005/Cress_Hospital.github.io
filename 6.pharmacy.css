@@ -16,66 +16,13 @@ body {
   padding: 0;
 }
 
-h1, h2, h3 {
-  color: var(--primary-color);
-}
-
-h1 {
-  color: var(--background-color);
-}
-
-p {
-  color: #ffffff; /* Default paragraph color */
-}
-
-.logo img {
-  max-width: 200px;
-  height: auto;
-  margin-right: 20px;
-  align: left;
-}
-
-.search-form {
-  display: flex;
-  align-items: center;
-  margin-top: 10px;
-}
-
-.search-form input[type="text"] {
-  padding: 5px;
-  border: 1px solid var(--border-color);
-  border-radius: 4px;
-}
-
-.search-form button {
-  padding: 5px 10px;
-  border: none;
-  background-color: var(--secondary-color);
-  color: #ffffff;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.search-form button:hover {
-  background-color: var(--secondary-color);
-}
-
-a {
-  color: var(--primary-color);
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
+/* Header Styles */
 header, footer {
   background-color: var(--primary-color);
   border-bottom: 2px solid var(--border-color);
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin-bottom: 0;
-  
+  margin-bottom: 0; /* Align with previous code */
 }
 
 .header-main {
@@ -94,6 +41,7 @@ header, footer {
 h1 {
   margin: 10px 0;
   text-align: center;
+  color: var(--background-color); /* Same as previous code */
 }
 
 .search-form {
@@ -125,7 +73,7 @@ h1 {
 
 /* Navigation Styles */
 nav {
-  background-color: var(--secondary-color); /* Changed color for better visibility */
+  background-color: var(--secondary-color);
   padding: 10px 0;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -136,6 +84,7 @@ nav ul {
   margin: 0;
   display: flex;
   justify-content: center;
+  color: aliceblue;
 }
 
 nav li {
@@ -146,18 +95,174 @@ nav a {
   padding: 10px 20px;
   display: block;
   font-size: 16px;
-  color: white;
-  text-align: center; /* Centered text within the nav links */
-  border-radius: 4px;
-  transition: background-color 0.3s, color 0.3s; /* Smooth transition effect */
+  color: aliceblue;
+  text-decoration: none;
 }
 
 nav a:hover {
-  background-color: var(--secondary-color); /* Lighter background on hover */
-  color: var(--primary-color); /* Text color on hover */
+  background-color: white;
+  color: var(--primary-color);
+  border-radius: 4px;
 }
 
-/* Main section styling */
+/* Main Content Styles */
+main {
+  padding: 20px;
+  background-color: #ffffff; /* Add background for contrast */
+  border-radius: 8px; /* Smooth edges for a professional look */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  max-width: 1200px; /* Ensure readability on large screens */
+  margin: 20px auto; /* Center the main content */
+  line-height: 1.6; /* Improve text readability */
+}
+
+/* Section Heading */
+h2 {
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  font-size: 1.8em; /* Slightly larger for emphasis */
+  color: var(--primary-color); /* Keep consistent branding */
+}
+
+/* Table Styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  background-color: #f9f9f9; /* Light background for tables */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Add depth to table */
+}
+
+th, td {
+  padding: 15px; /* More padding for spacing */
+  text-align: left;
+  font-size: 1em; /* Uniform text size for clarity */
+}
+
+th {
+  background-color: var(--secondary-color);
+  font-weight: bold;
+  text-transform: uppercase; /* Professional style for headers */
+}
+
+tfoot td {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  text-align: center;
+  font-weight: bold; /* Emphasize footer section */
+}
+
+/* Footer Styles */
+footer {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  padding: 20px 0;
+  text-align: left;
+}
+
+footer h1, footer h2, footer h3 {
+  color: #ffffff; /* Ensure main topic heading is white */
+}
+
+footer a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .header-container {
+    padding: 0 10px;
+  }
+
+  .search-form {
+    margin-top: 10px;
+  }
+
+  .search-form input[type="text"], .search-form button {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 992px) {
+  .header-main {
+    flex-direction: column;
+  }
+
+  .header-container {
+    width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  table {
+    font-size: 0.9em;
+  }
+
+  /* Make the grid layout more responsive */
+  .condition {
+    grid-template-columns: repeat(2, 1fr); /* Stack in 2 columns on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .header-main h1 {
+    font-size: 1.5em;
+  }
+
+  .search-form input[type="text"], .search-form button {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .search-form button {
+    margin-top: 10px;
+  }
+
+  table {
+    font-size: 0.8em;
+  }
+
+  /* Stack the grid items in one column for very small screens */
+  .condition {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Grid styling for condition options */
+.condition {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 equal-width columns */
+  grid-template-rows: repeat(2, 1fr); /* 2 equal-height rows */
+  gap: 20px; /* Adds space between items */
+  padding: 20px;
+}
+
+.name-of-condition {
+  text-align: center; /* Center the content */
+}
+
+.name-of-condition img {
+  width: 100%; /* Ensures images are responsive within their containers */
+  height: auto;
+  object-fit: cover;
+}
+
+/* Form Section Styling */
 .form-section {
   padding: 40px;
   background-color: #f9f9f9;
@@ -167,222 +272,57 @@ nav a:hover {
   margin: 0 auto;
 }
 
-/* Fieldset styling */
-fieldset {
-  border: 2px solid var(--primary-color);
-  padding: 20px;
-  border-radius: 8px;
-}
-
-/* Legend styling */
-legend {
-  font-size: 1.5em;
-  font-weight: bold;
-  color: var(--primary-color);
-  padding: 0 10px;
-}
-
-/* Label styling */
-label {
-  display: block;
-  margin: 10px 0 5px;
-  font-weight: bold;
-  color: #333;
-}
-
 /* Input fields styling */
-input[type="text"], 
-input[type="email"], 
-input[type="tel"], 
-select, 
+input[type="text"],
+input[type="email"],
+input[type="tel"],
 input[type="file"] {
-  width: calc(100% - 22px);
+  width: 100%;
   padding: 10px;
   border: 1px solid var(--border-color);
-  border-radius: 5px;
-  margin-bottom: 1rem;
-  font-size: 1rem;
+  border-radius: 4px;
+  margin-bottom: 15px;
 }
 
-/* File input specific styling */
-input[type="file"] {
-  padding: 0.5rem;
-  border: 1px solid var(--border-color);
-  margin-top: 0.5rem;
-}
-
-/* Button styling */
 button {
   background-color: var(--primary-color);
   color: white;
-  border: none;
   padding: 10px 20px;
+  border: none;
   border-radius: 4px;
-  font-size: 1rem;
   cursor: pointer;
-  outline: 2px solid transparent; /* For accessibility focus styles */
-  outline-offset: 2px;
-  margin-top: 1rem;
 }
 
-/* Button hover and focus styles */
-button:hover,
-button:focus {
+button:hover {
   background-color: var(--secondary-color);
-  outline: 2px solid var(--secondary-color); /* Visible focus style */
 }
 
-/* Paragraph styling */
-p {
-  margin: 0.5rem 0;
+/* Doctor grid styling */
+.doctor-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 2em;
 }
 
-/* Additional sections */
-.medications-list {
+.doctor-card {
+  background-color: #fff;
   border: 1px solid var(--border-color);
-  border-radius: 5px;
-  padding: 0.5rem;
-  background-color: #f9f9f9;
-}
-
-/* Accessibility enhancements */
-input:focus,
-select:focus,
-textarea:focus {
-  border-color: var(--primary-color);
-  outline: none;
-  box-shadow: 0 0 0 2px rgba(70, 130, 180, 0.3); /* Focus shadow */
-}
-
-
-/* Footer Styles */
-footer {
-  background-color: var(--primary-color);
-  border-top: 2px solid var(--border-color);
-  color: white;
-  padding: 20px;
+  border-radius: 8px;
+  padding: 1em;
   text-align: center;
+}
+
+.doctor-card img {
   width: 100%;
+  height: auto;
+  border-bottom: 1px solid var(--border-color);
 }
 
-footer h1, footer h2, footer h3 {
-  color: white; /* Ensures that all main topics in the footer are white */
+.doctor-card h3 {
+  margin: 1em 0 0.5em;
+  color: var(--primary-color);
 }
 
-footer a {
-  color: white;
-  text-decoration: none;
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
-
-footer p {
-  margin: 10px 0;
-}
-
-
-
-
-/* Responsive Styles */
-
-/* Tablet and smaller screens */
-@media (max-width: 1024px) {
-  .header-container {
-    padding: 0 10px;
-  }
-
-  .search-form {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .search-form input[type="text"] {
-    margin-bottom: 10px; /* Space between input and button */
-  }
-
-  .search-form button {
-    width: 100%; /* Full width button */
-  }
-}
-
-/* Small screens and mobile devices */
-@media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-  }
-
-  nav a {
-    padding: 15px;
-    font-size: 14px;
-  }
-
-  .header-main {
-    padding: 15px 0;
-  }
-
-  .header-container {
-    padding: 0 10px;
-  }
-
-  .form-section {
-    padding: 20px;
-  }
-
-  .search-form {
-    flex-direction: column;
-  }
-
-  .search-form input[type="text"] {
-    margin-bottom: 10px; /* Space between input and button */
-  }
-
-  .search-form button {
-    width: 100%; /* Full width button */
-  }
-}
-
-/* Extra small screens */
-@media (max-width: 480px) {
-  .header-main {
-    padding: 10px 0;
-  }
-
-  .header-container {
-    padding: 0 5px;
-  }
-
-  .header-container h1 {
-    font-size: 24px;
-  }
-
-  .search-form input[type="text"], 
-  .search-form button {
-    padding: 8px;
-  }
-
-  .search-form button {
-    font-size: 14px;
-  }
-
-  .form-section {
-    padding: 15px;
-  }
-
-  input[type="text"], 
-  input[type="email"], 
-  input[type="tel"], 
-  select {
-    font-size: 0.9rem;
-  }
-
-  button {
-    padding: 8px 16px;
-    font-size: 0.9rem;
-  }
-
-  .medications-list {
-    padding: 0.25rem;
-  }
+.doctor-card p {
+  margin: 0.5em 0;
 }
